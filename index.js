@@ -10,7 +10,7 @@ const { Server } = require("socket.io")
 const io = new Server(server)
 
 const users = {}
-const colors = ["blue", "red", "pink", "yellow", "orange", "purple"]
+const colors = ["blue", "red", "pink", "green", "orange", "purple"]
 
 io.on("connection", (socket) => {
   // socket.broadcast.emit('a user connected');
