@@ -32,10 +32,6 @@ io.on("connection", (socket) => {
     socket.broadcast.emit("user-connected", users[socket.id]) // send user info to all clients expect sender
     // io.emit("user-connected", users[socket.id])// send to all connected clients
   })
-  // on form submit, this event fires
-  // socket.on('chat message', (msg) => {
-  //   console.log('message: ' + msg);
-  // });
 
   // on form submit, this event fires
   // send a message to everyone connected to the socket
