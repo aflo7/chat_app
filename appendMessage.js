@@ -1,4 +1,4 @@
-export default function appendMessage(text, color) {
+export default function appendMessage(text, color = "black") {
   var item = document.createElement("li")
   item.textContent = text
   item.style.color = color
