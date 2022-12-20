@@ -54,6 +54,11 @@ io.on("connection", (socket) => {
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html")
 })
+
+app.get("/test", (req, res) => {
+  res.json({msg: "test"})
+})
+
 const port = process.env.PORT || 3000
 server.listen(port, () => {
   console.log(`Listening on port ${port}...`)
