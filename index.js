@@ -1,7 +1,14 @@
 const express = require("express")
+var cors = require('cors')
+
 const app = express()
+app.use(cors({
+  origin: 'https://app3.memberssonly.xyz',credentials: true
+}));
 app.use(express.static(__dirname))
 require('dotenv').config()
+app.set('trust_proxy', 1)
+
 
 const http = require("http")
 const server = http.createServer(app)
