@@ -1,0 +1,6 @@
+Add “{user} is typing” functionality.
+Show who’s online.
+Add private messaging.
+Share your improvements!
+
+add colors for each user

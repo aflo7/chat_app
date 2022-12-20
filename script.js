@@ -20,13 +20,14 @@ form.addEventListener("submit", function (e) {
   e.preventDefault()
   if (input.value) {
     socket.emit("chat message", input.value)
+    appendMessage(`You: ${input.value}`)
     input.value = ""
   }
 })
 
 // when another client sends a message, retrieve it here
-socket.on("chat message", function (msg) {
-  appendMessage(msg)
+socket.on("chat message", function ({name, msg}) {
+  appendMessage(`${name}: ${msg}`)
 })
 
 // when a user connects from another client, display their name

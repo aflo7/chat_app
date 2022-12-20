@@ -59,10 +59,24 @@
     #messages>li:nth-child(odd) {
       background: #efefef;
     }
+
+    #logo {
+      /* margin: 0 auto; */
+      padding: 5px;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
   </style>
 </head>
 
 <body>
+  <div class="logo-wrapper">
+  <img src="./chat_logo.png" height="50px" id="logo"/>
+</div>
   <ul id="messages"></ul>
   <form id="form" action="">
     <input id="input" autocomplete="off" /><button>Send</button>
